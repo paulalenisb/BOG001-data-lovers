@@ -1,0 +1,60 @@
+@media (min-width: 400px) {
+    header {
+        background-image: url("images/tablet_header.png");
+        height:30vw ;
+        width: 100vw;     
+           
+    }
+    .btn_aboutMe {
+        
+        border-radius: 7px;
+        width: 140px;
+        height: 30px;
+        font-family: 'Roboto';
+        font-size: 20px;
+        margin-top: 15px;
+        color: #333333
+    }
+    
+    body 
+
+    .card {
+        width: 200px;
+        font-size: 15px;
+        padding-bottom: 5px; 
+    }
+
+    #listOfPokemon {
+        margin-top: 40vw ;
+    }
+
+}
+
+@media (min-width: 800px) {
+    header {
+        background-image: url("images/web_header.png");
+        height:20vw ;
+        width: 100vw;   
+        box-sizing: border-box;  
+           
+    }
+
+    
+    body 
+
+    .card {
+        width: 200px;
+        font-size: 15px;
+        padding-bottom: 5px; 
+    }
+
+    #listOfPokemon {
+        margin-top: 30vw ;
+    }
+
+    .nav{
+       
+        margin: auto;
+        margin-top: 11vw;
+}
+}
