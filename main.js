@@ -13,11 +13,12 @@ window.onload
 
 
 
-// import {
+import {
   
-//   orderNames,
+  orderNames,
+  filterType,
   
-// } from './data.js';
+} from './data.js';
 
 
      fetch('https://raw.githubusercontent.com/paulalenisb/BOG001-data-lovers/master/src/data/pokemon/pokemon.json')
@@ -27,12 +28,20 @@ window.onload
           const allData= data.pokemon
          createCard(allData);
          
+
+        
+      
+
+         
        
      function createCard (allData) {
       let card = '';
          
           for ( let i = 0;  i < allData.length; i++) {
               
+            if (allData[i].candy_count === undefined) {
+              allData[i].candy_count = 'I do not eat candies'
+                  }
             card += `
             <li class="card" id="cards${allData[i].id}">
             <h2 id="namePokemon${allData[i].name}" class="name">${allData[i].name}   ${allData[i].num}</h2>
@@ -46,9 +55,9 @@ window.onload
              <img src="${allData[i].img}" alt="pokemon_card_popup">
              <h2 class="name_popup">${allData[i].name} ${allData[i].num}</h2>
              <div class="blue_bar"> </div>
-             <p class="type">Type: ${allData[i].type}</p>
+             <p class="type" id="${allData[i].type}">Type: ${allData[i].type}</p>
              <div class="container2_popup">
-             <p class="pokemon_info"> <strong> Weaknesses:</strong> ${allData[i].weaknesses}</p>
+             <p class="pokemon_info"> <strong> Weaknesses:</strong> <span id="${allData[i].weaknesses}">${allData[i].weaknesses}</span> </p>
              <p class="pokemon_info"><strong>Candy:</strong> ${allData[i].candy}</p>
              <p class="pokemon_info"><strong>Candy Count: </strong>${allData[i].candy_count}</p>
              <p class="pokemon_info"><strong>Spawn Chance:</strong> ${allData[i].spawn_chance}</p>
@@ -61,47 +70,60 @@ window.onload
             ` 
  
 
-          };
+          }
+          // .join(", ")
           
-          document.getElementById('listOfPokemon').innerHTML = card;
-        
+          document.getElementById('listOfPokemon').innerHTML = card
+
+          
+
         }
       
-      
-        function getOrderCards(){
+        // function getOrderCardsAz(){
+        // const stringAz = selectOrderAz.textContent
+        // createCard(orderNames(allData, stringAz ));
+        // };
+
+       const getOrderCards =(e)=>{
+          const eventBtnSort= e.target.textContent
+    
+          createCard(orderNames(allData, eventBtnSort ))
           
-        const valueOption = selectOrderAz.value
-        createCard(orderNames(allData, valueOption));
         }
 
-         const selectOrderAz = document.querySelector('#sortNames');
-        selectOrderAz.addEventListener('change',getOrderCards)
+
       
+        let menuSort = document.querySelector('.menuSort');
+         menuSort.addEventListener('click',getOrderCards)
+
+
+
+
+
+         let typePokemon = document.querySelector('.menuType')
+         const onclick = (e)=>{
+           const eventBtnFilter= e.target.textContent
+           createCard(filterType(allData, eventBtnFilter))
+          typePokemon.style.display = 'none';
+
+         }
+        
+
+          typePokemon.addEventListener('click', onclick)
+         console.log(filterType(allData, "Poison"))
+      
+       
+    
+
     })
 
+    
+
+    
 
 
-    const orderNames = (data, option) => {
-      const orderAZ = data.sort(function(a, b){
-        if (a.name < b.name) {
-          return -1
-        }
-        if (a.name < b.name) {
-          return 1
-        }
-      })
-          
-     if (option === 'A-Z') {
-       return orderAZ;
-     }
-     if (option === 'Z-A') {
-       return orderAZ.reverse();
-     }
-     return orderAZ;
-    };
+       window.modal = modal;
 
-
-       
         function modal (id) {
           let overlay = document.getElementById("overlay" + id);
           let modalPopup = document.getElementById("modal" + id);
@@ -109,8 +131,10 @@ window.onload
           overlay.style.display = 'block';
           
           console.log(modalPopup)
-     };
+     }
       
+     window.closeModal = closeModal;
+
        function closeModal (id) {
           let overlay = document.getElementById("overlay" + id);
           let modalPopup = document.getElementById("modal" + id);
@@ -120,3 +144,11 @@ window.onload
        }
 
 
+      
+      
+   
+     
+
+
+        
+         

@@ -5,6 +5,20 @@
         width: 100vw;     
            
     }
+
+    #listOfPokemon {
+        margin-top: 42vw ;
+    }
+}
+
+@media (min-width: 700px) {
+        header {
+        /* background-image: url("images/tablet_header.png"); */
+        height:30vw ;
+        width: 100vw; 
+        }
+
+
     .btn_aboutMe {
         
         border-radius: 7px;
@@ -25,12 +39,77 @@
     }
 
     #listOfPokemon {
-        margin-top: 40vw ;
+        margin-top: 45vw ;
     }
+
+    .navegation{
+        font-size: 20px;
+
+}
+.menuType{
+    margin-top:0vh;
 
 }
 
-@media (min-width: 800px) {
+.menuSort{
+    margin-top:0vh;
+}
+.popup{
+    margin: 7rem;
+    width: 60vw;
+}
+
+.blue_bar{
+    margin-left: 8vw;
+}
+}
+@media (min-width: 1024px) {
+    header {
+        background-image: url("images/web_header.png");
+        height:20vw ;
+        width: 100vw;   
+        box-sizing: border-box;  
+           
+    }
+
+    
+    body 
+
+    .card {
+        width: 200px;
+        font-size: 15px;
+        padding-bottom: 5px; 
+        margin: 20px;
+    }
+
+    #listOfPokemon {
+        margin-top: 30vw ;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .nav{
+       
+        margin: auto;
+        margin-top: 11vw;
+}
+    .navegation{
+        margin-top: 20vh;
+        width: 100%;
+    }
+
+    .popup{
+        margin: 18rem;
+        width: 40vw;
+    }
+    
+    .blue_bar{
+        margin-left: 5vw;
+        width: 30vw
+    }
+}
+
+@media (min-width: 1200px) {
     header {
         background-image: url("images/web_header.png");
         height:20vw ;
@@ -50,6 +129,8 @@
 
     #listOfPokemon {
         margin-top: 30vw ;
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
 
     .nav{
@@ -57,4 +138,29 @@
         margin: auto;
         margin-top: 11vw;
 }
+    .navegation{
+        margin-top: 23vh;
+        width: 100%;
+        height:7vh ;
+    }
+
+    .blue_bar{
+        margin-left: 5vw;
+        width: 20vw
+    }
+
+    .popup{
+        margin: 18rem;
+        width: 30vw;
+    }
+
+    .menuType{
+        margin-top:1.1vh;
+    
+    }
+    
+    .menuSort{
+        margin-top:1.1vh;
+    }
 }
+
