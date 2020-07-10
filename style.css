@@ -27,6 +27,10 @@ body {
     height:7vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .navegation ul{
@@ -47,25 +51,28 @@ body {
 }
 
 .menu li a:hover{
-	color: #CE7D35;
-	transition: all .3s;
+	color: #48688ad3;
+    transition: all .3s;
+    background-color: wheat;
 }
 
 .menuType {
 	position: absolute;
 	background: #48688ad3;
-	width: 120%;
+	width: 125%;
 	visibility: hidden;
     opacity: 0;
     color: white;
     transition: opacity 1.5s;
     margin-top: -0.6vh;
+    padding: 0px;
 }
 
 .menuType li a{
 	display: block;
     padding: 5px;
     padding-right: 15px;
+    padding-left: 20px;
 	color: white;
 	font-family: 'Roboto', sans-serif;;
     text-decoration: none;
@@ -75,11 +82,13 @@ body {
 .menuSort {
     position: absolute;
 	background:#48688ad3;
-	width: 120%;
+	width: 100%;
 	visibility: hidden;
 	opacity: 0;
     transition: opacity 1.5s;
     margin-top: -0.6vh;
+    padding: 0px;
+    text-align: center;
 }
 
 .menuSort li a{
@@ -188,7 +197,6 @@ body {
      padding: 20px;
      text-align: center;
      width: 75vw;
-     
      margin: 2rem;
      /* transition: .3s ease all;
      transform: scale(0.7);
@@ -200,12 +208,12 @@ body {
 }
 
 .popup .btn-close-popup {
-	font-size: 16px;
+	font-size: 30px;
 	line-height: 16px;
 	display: block;
 	text-align: right;
 	transition: .3s ease all;
-	color: #BBBBBB;
+    color: #48688a;
 }
 
 .popup .btn-close-popup:hover {
