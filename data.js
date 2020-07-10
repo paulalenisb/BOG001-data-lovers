@@ -26,7 +26,7 @@ export const orderNames = (data, option) => {
 
 
  export const filterType = (data, option) => {
-          const newArray = data.filter((el) => el.type.includes(option));
-          return newArray;
+          const newFilterType = data.filter((object) => object.type.includes(option));
+          return newFilterType;
  }
 

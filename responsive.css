@@ -1,9 +1,9 @@
 @media (min-width: 400px) {
+    
     header {
         background-image: url("images/tablet_header.png");
         height:30vw ;
-        width: 100vw;     
-           
+        width: 100vw;          
     }
 
     #listOfPokemon {
@@ -11,12 +11,14 @@
     }
 }
 
+
 @media (min-width: 700px) {
-        header {
+
+    header {
         /* background-image: url("images/tablet_header.png"); */
         height:30vw ;
-        width: 100vw; 
-        }
+        width: 100%; 
+     }
 
 
     .btn_aboutMe {
@@ -24,13 +26,11 @@
         border-radius: 7px;
         width: 140px;
         height: 30px;
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;;
         font-size: 20px;
         margin-top: 15px;
         color: #333333
     }
-    
-    body 
 
     .card {
         width: 200px;
@@ -44,36 +44,36 @@
 
     .navegation{
         font-size: 20px;
-
-}
-.menuType{
-    margin-top:0vh;
-
-}
-
-.menuSort{
-    margin-top:0vh;
-}
-.popup{
-    margin: 7rem;
-    width: 60vw;
-}
-
-.blue_bar{
-    margin-left: 8vw;
-}
-}
-@media (min-width: 1024px) {
-    header {
-        background-image: url("images/web_header.png");
-        height:20vw ;
-        width: 100vw;   
-        box-sizing: border-box;  
-           
+        width: 100%;
     }
 
+    .menuType{
+        margin-top:0vh;
+    }
+
+    .menuSort{
+        margin-top:0vh;
+    }
+
+    .popup{
+        margin: 7rem;
+        width: 60vw;
+    }
+
+    .blue_bar{
+        margin-left: 8vw;
+    }
+}
+
+
+@media (min-width: 1024px) {
     
-    body 
+    header {
+        background-image: url("images/web_header01.png");
+        height:18vh;
+        width: 100vw;   
+        box-sizing: border-box;  
+    }
 
     .card {
         width: 200px;
@@ -83,18 +83,17 @@
     }
 
     #listOfPokemon {
-        margin-top: 30vw ;
+        margin-top: 23vw ;
         padding-left: 5vw;
         padding-right: 5vw;
     }
 
     .nav{
-       
         margin: auto;
         margin-top: 11vw;
 }
     .navegation{
-        margin-top: 20vh;
+        margin-top: 12vw;
         width: 100%;
     }
 
@@ -109,37 +108,56 @@
     }
 }
 
+@media (min-width: 1120px) {
+    
+    header {
+        background-image: url("images/web_header01.png");
+        height:18vh;
+        width: 100vw;   
+        box-sizing: border-box;  
+    }
+
+    .navegation{
+        margin-top: 12vw;
+        width: 100%;
+    }
+}
+    
+
 @media (min-width: 1200px) {
+   
     header {
         background-image: url("images/web_header.png");
-        height:20vw ;
-        width: 100vw;   
+        height:12vw ;
+        width: 100%;   
         box-sizing: border-box;  
            
     }
 
-    
     body 
 
-    .card {
+    /* .card {
         width: 200px;
         font-size: 15px;
         padding-bottom: 5px; 
+    } */
+
+    .card {
+        height: 210px;
     }
 
     #listOfPokemon {
-        margin-top: 30vw ;
+        margin-top: 18vw ;
         padding-left: 5vw;
         padding-right: 5vw;
     }
 
     .nav{
-       
         margin: auto;
         margin-top: 11vw;
-}
+    }
     .navegation{
-        margin-top: 23vh;
+        margin-top: 12vw;
         width: 100%;
         height:7vh ;
     }
@@ -150,17 +168,17 @@
     }
 
     .popup{
-        margin: 18rem;
+        margin: 11vh;
         width: 30vw;
+        justify-content: center;
     }
 
     .menuType{
-        margin-top:1.1vh;
+        margin-top:0.4vh;
     
     }
     
     .menuSort{
-        margin-top:1.1vh;
+        margin-top:0.4vh;
     }
 }
-
