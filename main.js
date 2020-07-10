@@ -49,7 +49,7 @@ fetch('https://raw.githubusercontent.com/paulalenisb/BOG001-data-lovers/master/s
                 <div class="blue_bar"> </div>
                 <p class="type" id="${allData[i].type}">Type: ${allData[i].type}</p>
                 <div class="container2_popup">
-                <p class="pokemon_info"> <strong> Weaknesses:</strong> <span id="${allData[i].weaknesses}">${allData[i].weaknesses}</span> </p>
+                <p class="pokemon_info"> <strong> Weaknesses: </strong>  ${allData[i].weaknesses.join(", ")} </p>
                 <p class="pokemon_info"><strong>Candy:</strong> ${allData[i].candy}</p>
                 <p class="pokemon_info"><strong>Candy Count: </strong>${allData[i].candy_count}</p>
                 <p class="pokemon_info"><strong>Spawn Chance:</strong> ${allData[i].spawn_chance}</p>
@@ -60,6 +60,7 @@ fetch('https://raw.githubusercontent.com/paulalenisb/BOG001-data-lovers/master/s
                 </div>
 
                 ` 
+                console.log(allData[i].weaknesses);
  
 
           }
