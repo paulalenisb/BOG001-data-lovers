@@ -34,6 +34,16 @@ fetch('https://raw.githubusercontent.com/paulalenisb/BOG001-data-lovers/master/s
               allData[i].candy_count = 'I do not eat candies'
           }
 
+          let typeSection = "";
+
+          for (let t=0; t< allData[i].type.length; t++) {
+            
+            let typeColorPokemon = allData[i].type[t];
+            let color = getColor(typeColorPokemon);
+            typeSection =  typeSection + color + typeColorPokemon;
+
+          }
+
           card += `
                 <li class="card" id="cards${allData[i].id}">
                 <h2 id="namePokemon${allData[i].name}" class="name">${allData[i].name}   ${allData[i].num}</h2>
@@ -47,7 +57,7 @@ fetch('https://raw.githubusercontent.com/paulalenisb/BOG001-data-lovers/master/s
                 <img src="${allData[i].img}" alt="pokemon_card_popup">
                 <h2 class="name_popup">${allData[i].name} ${allData[i].num}</h2>
                 <div class="blue_bar"> </div>
-                <p class="type" id="${allData[i].type}">Type: ${allData[i].type}</p>
+                <p class="type" id="${allData[i].type}">Type: ${typeSection}</p>
                 <div class="container2_popup">
                 <p class="pokemon_info"> <strong> Weaknesses: </strong>  ${allData[i].weaknesses.join(", ")} </p>
                 <p class="pokemon_info"><strong>Candy:</strong> ${allData[i].candy}</p>
@@ -64,7 +74,6 @@ fetch('https://raw.githubusercontent.com/paulalenisb/BOG001-data-lovers/master/s
  
 
           }
-          // .join(", ")
           
           document.getElementById('listOfPokemon').innerHTML = card
 
@@ -98,7 +107,7 @@ function modal (id) {
   let overlay = document.getElementById("overlay" + id);
   let modalPopup = document.getElementById("modal" + id);
   modalPopup.style.display = 'block';
-  overlay.style.display = 'block';
+  overlay.style.display = 'flex';
   // console.log(modalPopup)
 }
       
@@ -112,7 +121,15 @@ function closeModal (id) {
 }
 
 
-      
+function getColor (type) {
+  if (type === "Grass") {
+    return "green"
+  }
+ 
+  return "blue"
+  
+
+}
       
    
      

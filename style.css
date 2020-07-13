@@ -21,16 +21,13 @@ body {
  }
  
  .navegation{
-	width: 1000px;
+	width: 100%;
     margin-top: 30vw;
     background-color: rgba(242, 200,73, 1);
     height:7vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
 }
 
 .navegation ul{
@@ -39,7 +36,8 @@ body {
 
 .menu > li{
 	position: relative;
-	display: inline-block;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .menu > li > a{
@@ -47,8 +45,10 @@ body {
 	padding: 15px 20px;
 	color: #353535;
 	font-family: 'Roboto', sans-serif;;
-	text-decoration: none;
+    text-decoration: none;
+    
 }
+
 
 .menu li a:hover{
 	color: #48688ad3;
@@ -59,25 +59,39 @@ body {
 .menuType {
 	position: absolute;
 	background: #48688ad3;
-	width: 125%;
+	width: 250%;
 	visibility: hidden;
     opacity: 0;
     color: white;
     transition: opacity 1.5s;
     margin-top: -0.6vh;
     padding: 0px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+
+.menuType li{
+    margin: 10px 0px 10px 0px;
 }
 
 .menuType li a{
-	display: block;
+	/* display: block; */
     padding: 5px;
     padding-right: 15px;
     padding-left: 20px;
 	color: white;
 	font-family: 'Roboto', sans-serif;;
     text-decoration: none;
-    display: block;
+   
+    
 }
+
+.menuType li a:target{
+    display: block;
+    padding: 10px;
+}
+
 
 .menuSort {
     position: absolute;
@@ -91,14 +105,21 @@ body {
     text-align: center;
 }
 
+.menuSort li{
+    margin: 10px 0px 10px 0px;
+}
 .menuSort li a{
-	display: block;
 	padding: 5px;
 	color: #333333;
     font-family: 'Roboto', sans-serif;;
     text-decoration: none;
     color: white;
 }
+
+.menuSort li a:target{
+    display: block;
+}
+
 
 .menu li:hover .menuSort{
 	visibility: visible;
@@ -110,10 +131,6 @@ body {
 	opacity: 1;
 }
 
-#menuType li{
-    height: 27px;
-    
-}
 
 #listOfPokemon {
     display: flex;
@@ -197,7 +214,6 @@ body {
      padding: 20px;
      text-align: center;
      width: 75vw;
-     margin: 2rem;
      /* transition: .3s ease all;
      transform: scale(0.7);
 	 opacity: 0; */
@@ -250,10 +266,6 @@ body {
     word-break: break-all;
 }
 
-span {
-    word-spacing:0.5rem;
-    word-break: break-all;
-}
 
 p#Grass,Poison.type {
 
