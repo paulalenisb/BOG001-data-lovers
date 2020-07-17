@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
     color: #333333;
     margin: 0px;
     padding: 0px;
@@ -19,128 +19,164 @@ body {
     top: 0;
     box-sizing: border-box;   
  }
- 
- .navegation{
+
+ .menu_bar {
+	display:none;
+}
+
+header {
 	width: 100%;
+}
+
+header nav {
+	z-index:1000;
     margin-top: 30vw;
-    background-color: rgba(242, 200,73, 1);
-    height:7vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+    width: 100%;
+    margin-bottom: 0;
+    background: #f2c849;
 }
 
-.navegation ul{
-    list-style: none;  
+header nav ul {
+	list-style:none;
 }
 
-.menu > li{
+header nav ul li {
+	display:inline-block;
 	position: relative;
-    display: inline-block;
-    cursor: pointer;
 }
 
-.menu > li > a{
-	display: block;
-	padding: 15px 20px;
-	color: #353535;
-	font-family: 'Roboto', sans-serif;;
-    text-decoration: none;
-    
+header nav ul li:hover {
+	background:wheat;
 }
 
-
-.menu li a:hover{
-	color: #48688ad3;
-    transition: all .3s;
-    background-color: wheat;
+header nav ul li a {
+    color: #333333;
+	display:block;
+	text-decoration:none;
+	padding: 20px;
 }
 
-.menuType {
-	position: absolute;
-	background: #48688ad3;
-	width: 250%;
-	visibility: hidden;
-    opacity: 0;
-    color: white;
-    transition: opacity 1.5s;
-    margin-top: -0.6vh;
-    padding: 0px;
-    display: grid;
+header nav ul li a span {
+	margin-right:10px;
+}
+
+/* header nav ul li:hover .menuType .menuSort {
+	display:block;
+} */
+
+.menuType{
+    display: none;
     grid-template-columns: 50% 50%;
     
+
 }
 
-.menuType li{
-    margin: 10px 0px 10px 0px;
+header nav ul li .menuType {
+	/* display: none; */
+	background:#6a97c7;
+	position: absolute;
+	width: 150%;
+    z-index:1000;
+    padding: 0;
 }
 
-.menuType li a{
-	/* display: block; */
-    padding: 5px;
-    padding-right: 15px;
-    padding-left: 20px;
-	color: white;
-	font-family: 'Roboto', sans-serif;;
-    text-decoration: none;
+header nav ul li .menuType li {
+	/* display: none; */
+	overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,.5);
    
-    
 }
 
-.menuType li a:target{
-    display: block;
-    padding: 10px;
+header nav ul li .menuType li a {
+    color: #f4f4f4;
+	
+}
+header nav ul li .menuType li a:hover {
+    color: #333333;
 }
 
+header nav ul li .menuType li a span {
+	float: right;
+	position: relative;
+	top:3px;
+	margin-right:0;
+	margin-left:10px;
+}
 
-.menuSort {
-    position: absolute;
-	background:#48688ad3;
+header nav ul li .menuSort {
+	display: none;
+	background:#6a97c7;
+	position: absolute;
 	width: 100%;
-	visibility: hidden;
-	opacity: 0;
-    transition: opacity 1.5s;
-    margin-top: -0.6vh;
+    z-index:1000;
     padding: 0px;
     text-align: center;
+
 }
 
-.menuSort li{
-    margin: 10px 0px 10px 0px;
-}
-.menuSort li a{
-	padding: 5px;
-	color: #333333;
-    font-family: 'Roboto', sans-serif;;
-    text-decoration: none;
-    color: white;
+header nav ul li .menuSort li {
+	display:block;
+	overflow: hidden;
+	/* border-bottom: 1px solid rgba(255,255,255,.5); */
 }
 
-.menuSort li a:target{
-    display: block;
+header nav ul li .menuSort li a {
+	color: #f4f4f4;
 }
 
-
-.menu li:hover .menuSort{
-	visibility: visible;
-	opacity: 1;
+header nav ul li .menuSort li a:hover {
+    color: #333333;
 }
 
-.menu li:hover .menuType{
-	visibility: visible;
-	opacity: 1;
+header nav ul li .menuSort li a span {
+	float: right;
+	position: relative;
+	top:3px;
+	margin-right:0;
+	margin-left:10px;
 }
 
+header nav ul li #caret  {
+	position: relative;
+	top:3px;
+	margin-left:10px;
+	margin-right:0px;
+}
+
+ #bigContainerResult{
+    position: relative;
+    top: 25vw;
+    padding: 0px 15px;
+    text-align: center;
+    background: #f4f4f4;
+    font-size: 14px;
+    width:100%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    display:none;
+    z-index: -9;
+}
+
+#searchName {
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 3px;
+    height: 25px;
+    font-family: 'Roboto', sans-serif;
+
+}
 
 #listOfPokemon {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 50vw;
+    margin-top: 55vw;
     margin-right: 10px ;
     margin-left: 10px ;
     padding: 0px;
+    
 }
 
 .card {
@@ -154,10 +190,11 @@ body {
     text-align: center;
     padding-bottom: 5px;
     box-shadow: 11px 9px 23px -12px rgba(0,0,0,0.38);
-}
+    /* z-index: -10; */
+} 
 
 .name {
-    background-color: rgba(242, 200,73, 1);
+    background-color: #f2c849;
     margin: 0px;
     height: 30px;
     align-items: center;
@@ -184,14 +221,16 @@ body {
 }
 
 #footer {
-    background: #ffffff;
+    background: #f4f4f4;
     display: flex;
     justify-content: center;
     font-size: 12px;
     height: 50px;
     align-items: center;
     box-sizing: border-box; 
-    bottom: 0px;
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
 }
 
 .overlay {
@@ -211,7 +250,7 @@ body {
      background: rgb(147, 217, 245);;
      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
      border-radius: 10px;
-     font-family: 'Roboto', sans-serif;;
+     font-family: 'Roboto', sans-serif;
      padding: 20px;
      text-align: center;
      width: 75vw;
@@ -237,8 +276,13 @@ body {
 	color: #000;
 } 
 
-.blue_bar {
-    background: #ffffff;
+.name_popup {
+    position: relative;
+    top: -15px;
+}
+
+.white_bar {
+    background: #f4f4f4;
     border-radius: 5px;
     width: 45vw;
     height: 10px;
@@ -248,6 +292,8 @@ body {
     box-sizing: border-box;
     margin-top: -12px;
     font-weight: bold;
+    position: relative;
+    top: -17px;
 }
 
 .pokemon_info {
@@ -262,13 +308,48 @@ body {
 }
 
 
-#weaknesses {
-    word-spacing:0.5rem;
-    word-break: break-all;
+.typeElement{
+    width: 70px;
+    height: 70px;
+
 }
 
+#pokemonGalery{
+    display: block;
+}
 
-p#Grass,Poison.type {
+#info h1{
+    margin-top: 36vw;
+    text-align: center;
+}
 
-    background-color: #9bcc50;
+.chartData{
+    width: 100%;
+    height: 400px;
+
+}
+#info h2{
+     margin-top:20px;
+    text-align: center;
+}
+
+#containerCharts {
+    display: none;
+}
+
+#info p {
+    background: #f4f4f4;
+    width: 300px;
+    height: 150px;
+    list-style: none;
+    font-size: 15px;
+    border-radius: 15px;
+    margin: 10px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 11px 9px 23px -12px rgba(0,0,0,0.38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }

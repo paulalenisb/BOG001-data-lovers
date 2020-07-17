@@ -13,19 +13,29 @@
   </head>
   <body>
     <header>
+
+
+      <!-- <input type="checkbox" id="btn-menu-responsive">
+      <label for="btn-menu-responsive"><i class="fas fa-bars"></i></label> -->
       <!-- <a href=""> </a> -->
       <!-- Menu dinamico -->
-      <nav class="navegation">
+      <!-- <nav class="navegation">
         <ul class="menu">
           <li><a href="">Home</a></li>
-          <li><a href="#">Type</a>
+          <li><a href="#" id="sortNames">Sort</a>
+            <ul class="menuSort" id="menuOrder">
+              <li><a href="#" type="button" value="A-Z" id="orderAz">A-Z</a></li>
+              <li><a href="#" type="button" value="Z-A" id="orderZa">Z-A</a></li>
+            </ul>
+          </li>
+          <li><a href="#" id="typeLink">Type</a>
           <ul class="menuType" >
             <li><a href="#" type="button"  id="">Grass</a></li>
             <li><a href="#" type="button"  id="">Poison</a></li>
             <li><a href="#" type="button"  id="">Fire</a></li>
-            <li><a href="#" type="button"  id="">Flying</a></li>
             <li><a href="#" type="button"  id="">Fighting</a></li>
             <li><a href="#" type="button"  id="">Rock</a></li>
+            <li><a href="#" type="button"  id="">Flying</a></li>
             <li><a href="#" type="button"  id="">Water</a></li>
             <li><a href="#" type="button"  id="">Ground</a></li>
             <li><a href="#" type="button"  id="">Psychic</a></li>
@@ -38,19 +48,67 @@
           </ul>
         </li>
 
-          <li><a href="#">Top</a></li>
+        <li><a href="#">Top</a></li>
+          
 
-          <li><a href="#" id="sortNames">Sort</a>
-            <ul class="menuSort" id="menuOrder">
-              <li><a href="#" type="button" value="A-Z" id="orderAz">A-Z</a></li>
-              <li><a href="#" type="button" value="Z-A" id="orderZa">Z-A</a></li>
+  
+        </ul>
+      </nav> -->
+
+      <div class="menu_bar">
+       <a href="#" type="button" id="menuBar" class="bt-menu"><span><i class="fas fa-bars"></i></span> Menú</a>
+      </div>
+   
+      <nav id="menuContent">
+        <ul>
+          <li><a href="#" id='home' type="button"><span><i class="fas fa-home"></i></span> Home</a></li>
+          <li><a href="#" type="button" id="chartLink"><span><i class="fas fa-chart-pie" ></i></span> Chart</a></li>
+          <li class="subMenuType">
+            <a href="#"><span><i class="fas fa-star"></i></span> Type <span id="caret" class="caret fas fa-chevron-down"></span></a>
+            <ul class="menuType" >
+              <li><a href="#" type="button"  id="">Grass</a></li>
+              <li><a href="#" type="button"  id="">Poison</a></li>
+              <li><a href="#" type="button"  id="">Fire</a></li>
+              <li><a href="#" type="button"  id="">Fighting</a></li>
+              <li><a href="#" type="button"  id="">Rock</a></li>
+              <li><a href="#" type="button"  id="">Flying</a></li>
+              <li><a href="#" type="button"  id="">Water</a></li>
+              <li><a href="#" type="button"  id="">Ground</a></li>
+              <li><a href="#" type="button"  id="">Psychic</a></li>
+              <li><a href="#" type="button"  id="">Electric</a></li>
+              <li><a href="#" type="button"  id="">Normal</a></li>
+              <li><a href="#" type="button"  id="">Ice</a></li>
+              <li><a href="#" type="button"  id="">Ghost</a></li>
+              <li><a href="#" type="button"  id="">Dragon</a></li>
+              <li><a href="#" type="button"  id="">Bug</a></li>
             </ul>
           </li>
+          <li class="submenuSort">
+            <a href="#"><span><i class="fas fa-sort"></i></span> Sort <span id="caret" class="caret fas fa-chevron-down"></span></a>
+            <ul class="menuSort" >
+              <li><a href="#" type="button" id="orderAz">A-Z</a></li>
+                <li><a href="#" type="button"  id="orderZa">Z-A</a></li>
+            </ul>
+          </li>
+          
+          
+          <li> <a href="#">
+            <form action="">
+              <input type="search" id="searchName" placeholder="Search name"> 
+              </form> </a>
+          </li>
+          
+      
         </ul>
       </nav>
           
     </header>
-
+    <section>
+      
+    </section>
+    <section id= "bigContainerResult">
+      <p id="containerComputeType">type pokemons</p>
+     </section>
     <section>
       <main id="pokemonGalery">
       <ul id="listOfPokemon">
@@ -59,10 +117,17 @@
     </div>
     </main>
   </section>
-
+  <section id="containerCharts">
+  <div id="info"></div>
+  <div class="chartData">
+    <canvas class="charts"></canvas>
+  </div>
+</section>
     <footer id="footer">© Copyright Proyecto realizado por Tatiana Toro & Paula Lenis 2020</footer>
     <div id="root"></div>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
     <script src="main.js" type="module"></script>
+    <script src="chart.js" type="module"></script>
   </body>
 </html>
+
