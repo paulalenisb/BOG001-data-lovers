@@ -76,3 +76,11 @@ export const minCandiesPokemon =(allData,) => {
    return result; 
 
 }
+
+window
+
+// var mostExpPilot = allData.reduce(function (oldest, pilot) {
+  //   return (oldest.candy_count || 0) < pilot.candy_count ? oldest : pilot;
+  // }, {});
+
+  // console.log(mostExpPilot)

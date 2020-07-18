@@ -5,7 +5,6 @@ body {
     color: #333333;
     margin: 0px;
     padding: 0px;
-    /*background: rgba(102,202,242,1);*/
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
  
@@ -60,9 +59,6 @@ header nav ul li a span {
 	margin-right:10px;
 }
 
-/* header nav ul li:hover .menuType .menuSort {
-	display:block;
-} */
 
 .menuType{
     display: none;
@@ -117,7 +113,6 @@ header nav ul li .menuSort {
 header nav ul li .menuSort li {
 	display:block;
 	overflow: hidden;
-	/* border-bottom: 1px solid rgba(255,255,255,.5); */
 }
 
 header nav ul li .menuSort li a {
@@ -136,7 +131,7 @@ header nav ul li .menuSort li a span {
 	margin-left:10px;
 }
 
-header nav ul li #caret  {
+header nav ul li .caret  {
 	position: relative;
 	top:3px;
 	margin-left:10px;
@@ -190,7 +185,6 @@ header nav ul li #caret  {
     text-align: center;
     padding-bottom: 5px;
     box-shadow: 11px 9px 23px -12px rgba(0,0,0,0.38);
-    /* z-index: -10; */
 } 
 
 .name {
@@ -339,13 +333,13 @@ header nav ul li #caret  {
 
 #info p {
     background: #f4f4f4;
-    width: 300px;
+    width: 280px;
     height: 150px;
     list-style: none;
     font-size: 15px;
     border-radius: 15px;
     margin: 10px;
-    text-align: center;
+    text-align: justify;
     padding: 15px;
     box-shadow: 11px 9px 23px -12px rgba(0,0,0,0.38);
     display: flex;
@@ -353,3 +347,7 @@ header nav ul li #caret  {
     align-items: center;
 
 }
+/* 
+strong  {
+    text-align: left;
+} */
