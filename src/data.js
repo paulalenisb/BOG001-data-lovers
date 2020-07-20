@@ -1,12 +1,11 @@
-// estas funciones son de ejemplo
 
 export const orderNames = (data, option) => {
   const orderAZ = data.sort(function(a, b){
     if (a.name < b.name) {
       return -1
     }
-    if (a.name < b.name) {
-      return 1
+   if (a.name < b.name) {
+       return 1;
     }
   })
       
@@ -18,12 +17,6 @@ export const orderNames = (data, option) => {
  }
 };
 
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
-
-
-
 
  export const filterType = (data, option) => {
           const newArrayFilterType = data.filter((object) => object.type.includes(option));
@@ -32,55 +25,47 @@ export const orderNames = (data, option) => {
 
  export const filterName = (data, pokemon) => {
   const newArrayname = data.filter((object) => object.name.toLowerCase().startsWith(pokemon.toLowerCase()));
-    
-    return newArrayname;
+  return newArrayname;
   
   }
 
 
-  export const candyAmountAvg =(allData,) => {
-  const avgCandyCount = allData.reduce((acc, character) => (acc + (character.candy_count)/151), 0);
+  export const avgHeightPokemon =(allData,) => {
+  const avgHeight = allData.reduce((acc, pokemon) => (acc + (parseFloat(pokemon.height))/allData.length), 0);
   
-  return Math.round(avgCandyCount);
-
+  return avgHeight.toFixed(2);
 
   }
 
 
   
-   export const sweetestPokemon =(allData,) => {
-   const sweeterPokemon = allData.reduce((sweetest, character) => {
-     let candies = (sweetest.candy_count || 0) > character.candy_count ? sweetest : character;
-     return candies;
+   export const tallestPokemon =(allData,) => {
+   const  tallPokemon = allData.reduce((tallest, pokemon) => {
+     let heightPokemon = (tallest.height || 0) > pokemon.height  ? tallest : pokemon;
+     return heightPokemon;
   }, {});
   
-  return sweeterPokemon
+  return tallPokemon
   
 }
 
 
-export const minCandiesPokemon =(allData,) => {
-  const pokemonWhitNoCandies = allData.reduce((sweet, character) => {
-    let noCandies = (sweet.candy_count || 0) < character.candy_count ? sweet : character;
-    
-    return noCandies;
+export const shortestPokemon =(allData,) => {
+  const shortPokemon = allData.reduce((sweet, pokemon) => {
+     let shortHeight = (sweet.height || 0) < pokemon.height ? sweet : pokemon;
+    return shortHeight;
  }, {});
  
- return pokemonWhitNoCandies
+ return shortPokemon
 }
 
 
 
-  export const percentPokemon = (type,) => {
-    let result = Math.round((type.length/151)*100)
+  export const percentPokemon = (arrType) => {
+    let result = Math.round((arrType.length/151)*100)
    return result; 
 
 }
 
-window
 
-// var mostExpPilot = allData.reduce(function (oldest, pilot) {
-  //   return (oldest.candy_count || 0) < pilot.candy_count ? oldest : pilot;
-  // }, {});
 
-  // console.log(mostExpPilot)
