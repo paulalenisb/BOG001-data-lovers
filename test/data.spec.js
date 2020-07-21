@@ -64,7 +64,7 @@ describe('sort data alphabetically', () => {
 });
 
 
-describe('Average candy count', () => {
+describe('Average Height', () => {
   it('Should be a function', () => {
     expect(typeof avgHeightPokemon).toBe('function');
   });

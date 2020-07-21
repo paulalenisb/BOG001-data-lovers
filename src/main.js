@@ -156,7 +156,7 @@ fetch('https://raw.githubusercontent.com/paulalenisb/BOG001-data-lovers/master/s
    chartBtn.addEventListener('click', showCharts)
 
 
-    console.log(parseFloat(allData[1].height))
+
    
    
 

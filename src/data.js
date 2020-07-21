@@ -30,7 +30,7 @@ export const orderNames = (data, option) => {
   }
 
 
-  export const avgHeightPokemon =(allData,) => {
+  export const avgHeightPokemon =(allData) => {
   const avgHeight = allData.reduce((acc, pokemon) => (acc + (parseFloat(pokemon.height))/allData.length), 0);
   
   return avgHeight.toFixed(2);
@@ -39,7 +39,7 @@ export const orderNames = (data, option) => {
 
 
   
-   export const tallestPokemon =(allData,) => {
+   export const tallestPokemon =(allData) => {
    const  tallPokemon = allData.reduce((tallest, pokemon) => {
      let heightPokemon = (tallest.height || 0) > pokemon.height  ? tallest : pokemon;
      return heightPokemon;
@@ -50,9 +50,9 @@ export const orderNames = (data, option) => {
 }
 
 
-export const shortestPokemon =(allData,) => {
-  const shortPokemon = allData.reduce((sweet, pokemon) => {
-     let shortHeight = (sweet.height || 0) < pokemon.height ? sweet : pokemon;
+export const shortestPokemon =(allData) => {
+  const shortPokemon = allData.reduce((short, pokemon) => {
+     let shortHeight = (short.height || 0) < pokemon.height ? short : pokemon;
     return shortHeight;
  }, {});
  
