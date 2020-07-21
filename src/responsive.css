@@ -12,10 +12,8 @@
 }
 
 @media screen and (max-width: 740px) {
-	body {
-		padding-top:80px;
-	}
-
+    
+    
 	.menu_bar {
         display: block;
 		width:100%;
@@ -82,9 +80,6 @@
 
     }
 
-	/* header nav ul li:hover .menuType{
-		display: none;
-	} */
 
 	header nav ul li .menuType{
 		width: 100%;
@@ -110,10 +105,6 @@
 
     }
 
-
-    /* header nav ul li:hover .menuSort {
-		display: block;
-	} */
 
 	header nav ul li .menuSort{
 		width: 100%;
@@ -182,11 +173,15 @@
         padding-top: 70px;
     }
 
-    #info p{
-        margin-left: 30vw;
-    }
-}
+    #titleChart h2{
+        margin-top:40px;
+      
+   }
 
+   #info h1 {
+    margin-top: 37vw;
+   }
+}
 
 @media (min-width: 1024px) {
     
@@ -294,26 +289,19 @@
     }
 
     .popup{
-        /* margin: 11vh; */
         width: 30vw;
-        /* justify-content: center; */
     }
 
-    /* .menuType{
-        margin-top:0.4vh;
-    
-    }
-    
-    .menuSort{
-        margin-top:0.4vh;
-    } */
-
+   
     #bigContainerResult {
         top: 17.4vw;
         font-size: 20px;
     }
-}
 
+    #square{
+    padding: 0px 120px;
+}
+}
 
 @media (min-width: 1440px) {
    
@@ -345,30 +333,14 @@
     
     }
 
+    #square {
+        padding: 0px 50px;
+    }
 
-}
-
-@media screen and (min-width: 500px) and (max-width: 767px) {
-
-    #info p{
-        margin-left: 70px;
+    #square div {
+        background: #f4f4f4;
+        width: 245px;
+        height: 200px;
     }
 }
 
-@media screen and (min-width: 400px) and (max-width: 499px){
-
-    #info p{
-        margin-left: 50px;
-    } 
-}
-
-@media screen and (min-width: 750px) and (max-width: 767px) {
-    
-    #info h1 {
-        margin-top: 45vw;
-    }
-
-    #info p{
-        margin-left: 30vw;
-    }
-}
