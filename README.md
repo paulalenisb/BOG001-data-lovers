@@ -10,7 +10,7 @@
 * [4. Prototipos](#4-prototipos)
 * [5. Diseño final](#5-diseño-final)
 * [6. Test de usabilidad](#6-test-de-usabilidad)
-* [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
+* [7. Tecnologías Usadas](#7-tecnologías-usadas)
 * [8. Checklist](#8-checklist)
 
 
@@ -96,7 +96,6 @@ Gracias al test de usabilidad con distintos usuarios a medida que íbamos avanza
 * [x] Manipular objects (key | value)
 * [x] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 | [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
-* [ ] Diferenciar entre expression y statements.
 * [x] Diferenciar entre tipos de datos atómicos y estructurados.
 
 ### Testing
@@ -113,7 +112,6 @@ Gracias al test de usabilidad con distintos usuarios a medida que íbamos avanza
 
 * [x] Uso de comandos de git (add | commit | pull | status | push)
 * [x] Manejo de repositorios de GitHub (clone | fork | gh-pages)
-* [ ] Colaboración en Github (branches | pull requests | |tags)
 
 ### UX
 
@@ -136,7 +134,6 @@ Gracias al test de usabilidad con distintos usuarios a medida que íbamos avanza
   `README.md`.
 * [x] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
-* [ ] Incluye link a Zeplin o Figma en `README.md`.
 * [x] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
 * [x] UI: Muestra lista y/o tabla con datos y/o indicadores.
